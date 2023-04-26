@@ -9,20 +9,16 @@ import pe.edu.cibertec.proyectoswa2.samav1.models.Empleado;
 
 @Controller
 public class HomeController {
-
-    @GetMapping("/")
-    public String login(Model model){
-        model.addAttribute("empleadoLogin",new Empleado());
-        return "index";
+    @GetMapping("/home")
+    public String home(Model model){
+//        model.addAttribute("empleadoLogin",new Empleado());
+        return "home";
     }
 
-    @PostMapping("/login")
-    public String login(@ModelAttribute("empleadoLogin") Empleado empleadoLogin, Model model){
-        if(empleadoLogin.getEmail().equals("carlos@gmail.com") && empleadoLogin.getPassw().equals("123")){
-            return "home";
-        }
-
-        return "index";
+    @GetMapping("/userdetails")
+    public String userDetails(Model model){
+//        model.addAttribute("empleadoLogin",new Empleado());
+        return "usuario-detalle";
     }
 
 }

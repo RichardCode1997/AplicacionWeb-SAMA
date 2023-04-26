@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>S.A.M.A. / Inicio de Seccion</title>
+    <title>MarcAndo / Inicio de Seccion</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -142,8 +142,8 @@
 <body>
 <div class="wrapper">
     <div class="form-box login">
-        <h2>S.A.M.A.</h2>
-        <form method="post" th:action="@{/login}" th:object="${empleadoLogin}">
+        <h2>MarcAndo</h2>
+        <form method="post" th:action="@{/home}" th:object="${empleadoLogin}">
             <div class="input-box">
                 <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                 <input type="email" th:field="${empleadoLogin.email}" required />
