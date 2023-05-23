@@ -7,9 +7,8 @@ import java.util.Date;
 @Data
 public class EmpleadoDTO {
     private Integer id_empleado;
-    private Integer fk_personas_id_persona;
+    private Integer fk_personas_id_personat;
     private String telefono_casa_empleado;
-    private String celular_personal_empleado;
     private String email_personal_empleado;
     private String direccion_empleado;
     private String referencia_direccion_empleado;

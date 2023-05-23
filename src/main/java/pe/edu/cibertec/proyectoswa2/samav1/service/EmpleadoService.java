@@ -20,6 +20,7 @@ public class EmpleadoService {
         EmpleadoDTO[] response = restTemplate.getForObject(basePath + "/empleados", EmpleadoDTO[].class);
         return Arrays.asList(response);
     }
+
     public void saveEmpleado (EmpleadoDTO empleado){
         restTemplate.postForObject(basePath + "/empleados",empleado,EmpleadoDTO.class);
     }

@@ -20,6 +20,8 @@ public class EmpleadoController {
     public ResponseEntity<List<EmpleadoDTO>> getAll(){
         return new ResponseEntity<>(empleadoService.getEmpleado(), HttpStatus.OK);
     }
+
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void saveEmpleado(@RequestBody EmpleadoDTO empleado){
