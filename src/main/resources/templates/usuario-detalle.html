@@ -8,7 +8,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center" th:fragment="header">
   <div class="d-flex align-items-center justify-content-between">
-    <a href="index.html" class="logo d-flex align-items-center">
+    <a href="/home" class="logo d-flex align-items-center">
       <img src="assets/img/logo.png" alt="" />
       <span class="d-none d-lg-block">MarcAndo</span>
     </a>
@@ -299,8 +299,8 @@
     <h1>Perfil</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-        <li class="breadcrumb-item">Usuarios</li>
+        <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/home">Usuarios</a></li>
         <li class="breadcrumb-item active">Perfil</li>
       </ol>
     </nav>
@@ -375,99 +375,76 @@
 
             </ul>
             <div class="tab-content pt-2">
-              <div
-                      class="tab-pane fade show active profile-overview"
-                      id="profile-overview"
-              >
+              <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
 
                 <h5 class="card-title">Detalles de Perfil</h5>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Nombre</div>
-                  <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                  <div class="col-lg-3 col-md-4 label">Nombre(s)</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Empresa</div>
-                  <div class="col-lg-9 col-md-8">
-                    Lueilwitz, Wisoky and Leuschke
-                  </div>
+                  <div class="col-lg-3 col-md-4 label">Apellido(s)</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Cargo</div>
-                  <div class="col-lg-9 col-md-8">Web Designer</div>
+                  <div class="col-lg-3 col-md-4 label">Dni</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Ciudad</div>
-                  <div class="col-lg-9 col-md-8">Peru</div>
+                  <div class="col-lg-3 col-md-4 label">Correo</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label">Direccion</div>
-                  <div class="col-lg-9 col-md-8">
-                    A108 Adam Street, New York, NY 535022
-                  </div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-3 col-md-4 label">Celular</div>
-                  <div class="col-lg-9 col-md-8">951 123 658</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Email</div>
-                  <div class="col-lg-9 col-md-8">
-                    k.anderson@example.com
-                  </div>
+                  <div class="col-lg-3 col-md-4 label">Rol</div>
+                  <div class="col-lg-9 col-md-8"></div>
                 </div>
               </div>
 
-              <div
-                      class="tab-pane fade profile-edit pt-3"
-                      id="profile-edit"
-              >
+              <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
                 <!-- Profile Edit Form -->
                 <form>
                   <div class="row mb-3">
-                    <label
-                            for="profileImage"
-                            class="col-md-4 col-lg-3 col-form-label"
-                    >Imagen de Perfil</label
-                    >
+                    <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Imagen de Perfil</label>
                     <div class="col-md-8 col-lg-9">
+                      <input type="file" name="profileImage" id="profileImage" accept="image/*">
+                      <!-- Mostrar la imagen actual -->
                       <img src="assets/img/profile-img.jpg" alt="Profile" />
                       <div class="pt-2">
-                        <a
-                                href="#"
-                                class="btn btn-primary btn-sm"
-                                title="Upload new profile image"
-                        ><i class="bi bi-upload"></i
-                        ></a>
-                        <a
-                                href="#"
-                                class="btn btn-danger btn-sm"
-                                title="Remove my profile image"
-                        ><i class="bi bi-trash"></i
-                        ></a>
+                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
                       </div>
                     </div>
+
                   </div>
 
                   <div class="row mb-3">
                     <label
-                            for="fullName"
+                            for="nombre"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Nombre Completo</label
+                    >Nombre(s)</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="fullName"
+                              name="nombre"
                               type="text"
                               class="form-control"
-                              id="fullName"
+                              id="nombre"
                               value="Kevin Anderson"
                       />
                     </div>
@@ -475,84 +452,84 @@
 
                   <div class="row mb-3">
                     <label
-                            for="company"
+                            for="apellido"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Empresa</label
+                    >Apellido(s)</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="company"
+                              name="apellido"
                               type="text"
                               class="form-control"
-                              id="company"
-                              value="Lueilwitz, Wisoky and Leuschke"
+                              id="apellido"
+                              value=""
                       />
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label
-                            for="Job"
+                            for="dni"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Cargo</label
+                    >Dni</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="job"
+                              name="dni"
                               type="text"
                               class="form-control"
-                              id="Job"
-                              value="Web Designer"
+                              id="dni"
+                              value=""
                       />
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label
-                            for="Country"
+                            for="correo"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Ciudad</label
+                    >Correo</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="country"
+                              name="correo"
                               type="text"
                               class="form-control"
-                              id="Country"
-                              value="Peru"
+                              id="correo"
+                              value=""
                       />
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label
-                            for="Address"
+                            for="direccion"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Ciudad</label
+                    >Correo</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="address"
-                              type="text"
+                              name="direccion"
+                              type="email"
                               class="form-control"
-                              id="Address"
-                              value="A108 Adam Street, New York, NY 535022"
+                              id="direccion"
+                              value=""
                       />
                     </div>
                   </div>
 
                   <div class="row mb-3">
                     <label
-                            for="Phone"
+                            for="celular"
                             class="col-md-4 col-lg-3 col-form-label"
                     >Celular</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="phone"
+                              name="celular"
                               type="text"
                               class="form-control"
-                              id="Phone"
+                              id="celular"
                               value="325 684 258"
                       />
                     </div>
@@ -560,16 +537,16 @@
 
                   <div class="row mb-3">
                     <label
-                            for="Email"
+                            for="nombreRol"
                             class="col-md-4 col-lg-3 col-form-label"
-                    >Email</label
+                    >Rol</label
                     >
                     <div class="col-md-8 col-lg-9">
                       <input
-                              name="email"
-                              type="email"
+                              name="nombreRol"
+                              type="text"
                               class="form-control"
-                              id="Email"
+                              id="nombreRol"
                               value="k.anderson@example.com"
                       />
                     </div>

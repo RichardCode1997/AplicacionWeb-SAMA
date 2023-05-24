@@ -11,6 +11,8 @@ public class UsuariosDTO {
     private String dni;
     private String correo;
     private String contraseña;
+    private String direccion;
+    private String celular;
     private RolesDTO rol;
 
     // Constructor, getters, and setters

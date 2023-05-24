@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.cibertec.proyectoswa2.samav1.datatranfertobjet.EmpleadoDTO;
 import pe.edu.cibertec.proyectoswa2.samav1.dto.EmpleadosDTO;
-import pe.edu.cibertec.proyectoswa2.samav1.service.EmpleadoService;
 import pe.edu.cibertec.proyectoswa2.samav1.service.apirest.EmpleadosService;
 
 import java.util.List;
