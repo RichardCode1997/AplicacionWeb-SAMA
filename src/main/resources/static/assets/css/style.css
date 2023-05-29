@@ -756,6 +756,15 @@ h6 {
 .sidebar-nav .nav-content a.active i {
   background-color: #4154f1;
 }
+.pagetitle nav {
+    display: inline-block;
+}
+
+.pagetitle .float-right {
+    float: right;
+    margin-left: 10px;
+}
+
 
 /*--------------------------------------------------------------
 # Dashboard

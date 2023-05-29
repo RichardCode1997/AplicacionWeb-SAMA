@@ -14,6 +14,11 @@ public class HomeController {
 //        model.addAttribute("empleadoLogin",new Empleado());
         return "home";
     }
+    @GetMapping("/horario")
+    public String horario(Model model){
+//        model.addAttribute("empleadoLogin",new Empleado());
+        return "horario";
+    }
 
     @GetMapping("/userdetails")
     public String userDetails(Model model){

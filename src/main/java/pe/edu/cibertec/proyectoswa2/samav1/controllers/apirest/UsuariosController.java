@@ -34,9 +34,9 @@ public class UsuariosController {
     }
 
     @PutMapping("/{ID_Usuario}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void modificarUsuarios(@PathVariable("ID_Usuario") Integer ID_Usuario, @RequestBody UsuariosDTO usuariosDTO){
-        usuariosService.modificarUsuarios(ID_Usuario,usuariosDTO);
+    public ResponseEntity<String> modificarUsuarios(@PathVariable("ID_Usuario") Integer ID_Usuario, @RequestBody UsuariosDTO usuariosDTO){
+        String mensajeConfirmacion = usuariosService.modificarUsuarios(ID_Usuario, usuariosDTO);
+        return ResponseEntity.status(HttpStatus.OK).body(mensajeConfirmacion);
     }
 
     @DeleteMapping("/{ID_Usuario}")
