@@ -20,6 +20,12 @@ public class HomeController {
         return "horario";
     }
 
+    @GetMapping("/noticia")
+    public String noticia(Model model){
+//        model.addAttribute("empleadoLogin",new Empleado());
+        return "noticia";
+    }
+
     @GetMapping("/userdetails")
     public String userDetails(Model model){
 //        model.addAttribute("empleadoLogin",new Empleado());

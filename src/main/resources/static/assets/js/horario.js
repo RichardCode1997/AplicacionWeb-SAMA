@@ -15,8 +15,8 @@ console.log("horarios")
         var thead = $('<thead></thead>');
         var headerRow = $('<tr></tr>');
         headerRow.append('<th scope="col">#Id</th>' +
-                        '<th scope="col">Nombre(s)</th>' +
-                        '<th scope="col">Hora de Entrada(s)</th>' +
+                        '<th scope="col">Detalle</th>' +
+                        '<th scope="col">Hora de Entrada</th>' +
                         '<th scope="col">Hora de Salida</th>' +
                         '<th scope="col">Acciones</th>');
         thead.append(headerRow);

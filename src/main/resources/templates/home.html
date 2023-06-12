@@ -14,20 +14,11 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
 
     <!-- Vendor CSS Files -->
-    <link
-            href="assets/vendor/bootstrap/css/bootstrap.min.css"
-            rel="stylesheet"
-    />
-    <link
-            href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-            rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
     <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
     <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
@@ -343,8 +334,9 @@
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar" th:fragment="menu">
     <ul class="sidebar-nav" id="sidebar-nav">
+
         <li class="nav-item">
-            <a class="nav-link" href="/home">
+            <a class="nav-link collapsed" href="/home">
                 <i class="bi bi-people-fill"></i>
                 <span>Usuarios</span>
             </a>
@@ -352,27 +344,25 @@
         <!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link" href="/horario">
+            <a class="nav-link collapsed" href="/horario">
                 <i class="bi bi-menu-button-wide"></i><span>Horarios</span >
             </a>
         </li>
         <!-- End Components Nav -->
 
         <li class="nav-item">
-            <a
-                    class="nav-link collapsed"
-                    data-bs-target="#forms-nav"
-                    data-bs-toggle="collapse"
-                    href="#"
-            >
-                <i class="bi bi-clock-fill"></i><span>Noticias</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link collapsed" href="/noticia">
+                <i class="bi bi-menu-button-wide"></i><span>Noticias</span >
             </a>
-            <ul
-                    id="forms-nav"
-                    class="nav-content collapse"
-                    data-bs-parent="#sidebar-nav"
-            >
+        </li>
+        <!-- End Components Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#" >
+                <i class="bi bi-clock-fill"></i><span>Noticias</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" >
                 <li>
                     <a href="#">
                         <i class="bi bi-circle"></i><span>Elemento 1</span>
