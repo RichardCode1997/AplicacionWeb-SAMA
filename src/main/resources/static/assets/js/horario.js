@@ -1,9 +1,7 @@
 $(document).ready(function() {
-console.log("horariosantes")
-
 
     var tbody = $('.table tbody');
-console.log("horarios")
+//    console.log("horarios")
     $.ajax({
       url: 'http://localhost:8080/horarios',
       method: 'GET',
@@ -28,7 +26,7 @@ console.log("horarios")
                         '<td>' + horario.horaEntrada + '</td>' +
                         '<td>' + horario.horaSalida + '</td>' +
                         '<td>' +
-                        '<a href="/userdetails?idUsuario=' + horario.idHorario + '" data-idusuario="' + horario.idHorario + '"><i class="bi bi-eye-fill" style="padding-right: 10px;"></i></a>' +
+                        '<a href="#" data-idhorario="' + horario.idHorario + '" data-toggle="modal" data-target="#staticBackdrop"><i class="bi bi-eye-fill" style="padding-right: 10px;"></i></a>' +
                         '<a href="#"><i class="bi bi-trash-fill"></i></a>' +
                         '</td>');
 
@@ -46,5 +44,46 @@ console.log("horarios")
         console.error('Error:', errorThrown);
       }
     });
+
+////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////
+//Guardar
+    $("#guardarHorario").click(function() {
+          var horentrada = $("#horentrada").val();
+          var horsalida = $("#horsalida").val();
+          var hordetalle = $("#hordetalle").val();
+
+          // Crear objeto de datos a enviar a la API
+          var datos = {
+            horaEntrada: horentrada,
+            horaSalida: horsalida,
+            nombre: hordetalle
+          };
+
+          // Realizar solicitud AJAX a la API
+          $.ajax({
+            url: "http://localhost:8080/horarios",
+            type: "POST",
+            data: JSON.stringify(datos),
+            contentType: "application/json",
+            success: function(response) {
+              // Manejar la respuesta de la API
+              console.log(response);
+              // Restablecer los campos del modal
+              $("#horentrada").val("");
+              $("#horsalida").val("");
+              $("#hordetalle").val("");
+              // Cerrar el modal
+              $("#staticBackdrop").modal("hide");
+            },
+            error: function(error) {
+              // Manejar el error de la solicitud
+              console.log(error);
+            }
+          });
+        });
+
 
 });

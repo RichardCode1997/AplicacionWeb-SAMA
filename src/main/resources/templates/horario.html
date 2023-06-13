@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <!-- Modal -->
+  <!-- Modal Bootstrap 5.2 -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -66,29 +66,37 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Nuevo Horario</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="horentrada" class="col-form-label">Hora de Entrada:</label>
-              <input type="text" class="form-control" id="horentrada">
-            </div>
-            <div class="mb-3">
-              <label for="horsalida" class="col-form-label">Hora de Salida:</label>
-              <input class="form-control" id="horsalida">
+        <form>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="horentrada" class="col-form-label">Hora de Entrada:</label>
+                  <input type="time" class="form-control" id="horentrada">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="horsalida" class="col-form-label">Hora de Salida:</label>
+                  <input type="time" class="form-control" id="horsalida">
+                </div>
+              </div>
             </div>
             <div class="mb-3">
               <label for="hordetalle" class="col-form-label">Detalle:</label>
               <textarea class="form-control" id="hordetalle"></textarea>
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="guardarHorario">Guardar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+
+
 
 
 </main>
