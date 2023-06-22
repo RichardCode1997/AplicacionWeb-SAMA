@@ -77,6 +77,7 @@ $(document).ready(function() {
               $("#hordetalle").val("");
               // Cerrar el modal
               $("#staticBackdrop").modal("hide");
+              window.location.href = '/home';
             },
             error: function(error) {
               // Manejar el error de la solicitud

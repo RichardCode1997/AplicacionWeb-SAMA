@@ -8,6 +8,7 @@ $.ajax({
   dataType: 'json',
   success: function(data) {
   tbody.empty(); // Limpia el contenido actual de la tabla antes de agregar nuevos datos
+  console.log('ajax: url: http://localhost:8080/usuarios', data)
 
    // Crea la cabecera de la tabla
     var thead = $('<thead></thead>');

@@ -19,6 +19,7 @@ $(document).ready(function() {
         type: 'GET',
 //        dataType: 'json',
         success: function(response) {
+        console.log('ajax: url: http://localhost:8080/roles', response)
 //        console.log("response",response)
          response.forEach(function(roles) {
 //         console.log("roles",roles)
@@ -28,7 +29,7 @@ $(document).ready(function() {
           });
         },
         error: function() {
-          console.log('Error al obtener los datos');
+          //console.log('Error al obtener los datos');
         }
       });
 
@@ -63,7 +64,7 @@ $(document).ready(function() {
                   $('#Linkedin').val('https://linkedin.com/');
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        console.error('Error:', errorThrown);
+        //console.error('Error:', errorThrown);
       }
     });
 
@@ -177,7 +178,7 @@ $(document).ready(function() {
           } else {
             // Mostrar mensaje de éxito
             alert(response);
-            window.location.href = '/home';
+            window.location.href = '/horario';
           }
       },
       error: function() {
