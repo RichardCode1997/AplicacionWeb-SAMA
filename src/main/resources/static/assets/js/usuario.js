@@ -23,24 +23,24 @@ $.ajax({
                     '<th scope="col">Rol</th>' +
                     '<th scope="col">Acciones</th>');
     thead.append(headerRow);
-
+    var contador = 1;
     $.each(data, function(index, usuario) {
       var nuevaFila = $('<tr></tr>');
-      nuevaFila.html('<th scope="row">' + usuario.idUsuario + '</th>' +
+      nuevaFila.html('<th scope="row">' + contador + '</th>' +
                     '<td>' + usuario.nombre  + '</td>' +
                     '<td>' + usuario.apellido + '</td>' +
                     '<td>' + usuario.dni + '</td>' +
                     '<td>' + usuario.correo + '</td>' +
                     '<td>' + usuario.direccion + '</td>' +
                     '<td>' + usuario.celular + '</td>' +
-                    '<td>' + usuario.rol.nombreRol      + '</td>' +
+                    '<td>' + usuario.rol.nombreRol + '</td>' +
                     '<td>' +
                     '<a href="/userdetails?idUsuario=' + usuario.idUsuario + '" data-idusuario="' + usuario.idUsuario + '"><i class="bi bi-eye-fill" style="padding-right: 10px;"></i></a>' +
-//                    '<a href="#"><i class="bi bi-eye-fill" style="padding-right: 10px;"></i></a>' +
                     '<a href="#"><i class="bi bi-trash-fill"></i></a>' +
                     '</td>');
 
       tbody.append(nuevaFila);
+      contador++;
     });
 
      // Actualiza el contenido del título y el párrafo

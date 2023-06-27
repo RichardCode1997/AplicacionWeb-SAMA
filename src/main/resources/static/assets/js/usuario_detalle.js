@@ -190,8 +190,4 @@ $(document).ready(function() {
   });
 
 
-
-
-
-
 });//fin del ready
