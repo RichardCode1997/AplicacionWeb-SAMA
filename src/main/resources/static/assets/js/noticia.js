@@ -1,31 +1,37 @@
+$(document).ready(function() {
+  $.ajax({
+    url: 'http://localhost:8080/noticias',
+    dataType: 'json',
+    success: function(data) {
+      // La respuesta JSON se ha recibido correctamente
+      // Procesa los datos y crea las cards dinámicamente
+      crearCards(data);
+    },
+    error: function() {
+      // Ocurrió un error al obtener los datos JSON
+      console.log('Error al obtener los datos JSON de la API.');
+    }
+  });
+});
 
+function crearCards(data) {
+  // Obtén el contenedor donde se agregarán las cards
+  var container = $('.row');
 
-// Función para activar el evento de presionar el input tipo file al hacer clic en el enlace
-function triggerFileInput() {
-  var fileInput = document.getElementById("profileImage");
-  fileInput.click();
-}
+  // Itera sobre los datos y crea las cards
+  $.each(data, function(index, item) {
+    // Crea el elemento de la card con los datos correspondientes
+    var card = $('<div>').addClass('col-xl-4');
+    var cardInner = $('<div>').addClass('card');
+    var cardImage = $('<img>').attr('src', item.imagen).addClass('card-img-top');
+    var cardBody = $('<div>').addClass('card-body');
+    var cardTitle = $('<h5>').addClass('card-title').text(item.titulo);
+    var cardText = $('<p>').addClass('card-text').text(item.detalle);
 
-function updateCardTitle(event) {
-  var input = event.target;
-  var cardTitle = document.querySelector('.card-title'); // Selecciona el elemento h5 con la clase 'card-title'
-  cardTitle.innerText = input.value; // Actualiza el texto del elemento h5 con el valor del campo de entrada 'title'
-}
-
-function updateCardText(event) {
-  var testArea = event.target;
-  var cardText= document.querySelector('.card-text'); // Selecciona el elemento p con la clase 'card-title'
-  cardText.innerText = testArea.value; // Actualiza el texto del elemento h5 con el valor del campo de entrada 'title'
-}
-
-function previewImage(event) {
-  var input = event.target;
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById("preview").src = e.target.result;
-      document.getElementById("preview1").src = e.target.result;
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
+    // Agrega los elementos al DOM
+    cardBody.append(cardTitle, cardText);
+    cardInner.append(cardImage, cardBody);
+    card.append(cardInner);
+    container.append(card);
+  });
 }
