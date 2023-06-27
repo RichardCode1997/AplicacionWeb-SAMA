@@ -32,4 +32,10 @@ public class HomeController {
         return "usuario-detalle";
     }
 
+    @GetMapping("/noticedetails")
+    public String noticeDetails(Model model){
+//        model.addAttribute("empleadoLogin",new Empleado());
+        return "noticia-detalle";
+    }
+
 }

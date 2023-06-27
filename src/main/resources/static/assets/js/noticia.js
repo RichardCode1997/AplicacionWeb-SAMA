@@ -23,7 +23,8 @@ function crearCards(data) {
     // Crea el elemento de la card con los datos correspondientes
     var card = $('<div>').addClass('col-xl-4');
     var cardInner = $('<div>').addClass('card');
-    var cardImage = $('<img>').attr('src', item.imagen).addClass('card-img-top');
+//    var cardImage = $('<img>').attr('src', item.imagen).addClass('card-img-top');
+    var cardImage = $('<img>').attr('src', "assets/img/card.jpg").addClass('card-img-top');
     var cardBody = $('<div>').addClass('card-body');
     var cardTitle = $('<h5>').addClass('card-title').text(item.titulo);
     var cardText = $('<p>').addClass('card-text').text(item.detalle);

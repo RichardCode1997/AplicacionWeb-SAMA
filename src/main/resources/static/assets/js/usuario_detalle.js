@@ -45,6 +45,7 @@ $(document).ready(function() {
         profileOverview.find('.col-lg-9:eq(1)').text(data.apellido);
         profileOverview.find('.col-lg-9:eq(2)').text(data.dni);
         profileOverview.find('.col-lg-9:eq(3)').text(data.correo);
+        profileOverview.find('.col-lg-9:eq(3)').text(data.contraseña);
         profileOverview.find('.col-lg-9:eq(4)').text(data.direccion);
         profileOverview.find('.col-lg-9:eq(5)').text(data.celular);
         profileOverview.find('.col-lg-9:eq(6)').text(data.rol.nombreRol);
@@ -54,6 +55,7 @@ $(document).ready(function() {
                   $('#apellido').val(data.apellido);
                   $('#dni').val(data.dni);
                   $('#correo').val(data.correo);
+                  $('#contraseña').val(data.contraseña);
                   $('#direccion').val(data.direccion);
                   $('#celular').val(data.celular);
                   $('#nombreRol').val(data.rol.idRol);
