@@ -9,6 +9,7 @@ import pe.edu.cibertec.proyectoswa2.samav1.models.Empleado;
 
 @Controller
 public class HomeController {
+
     @GetMapping("/home")
     public String home(Model model){
 //        model.addAttribute("empleadoLogin",new Empleado());
